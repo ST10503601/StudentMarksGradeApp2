@@ -2,112 +2,189 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/txtStudentNo"
+    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#FFC107"
     tools:context=".MainActivity">
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="80dp"
+        android:layout_marginStart="146dp"
         android:layout_marginTop="16dp"
-        android:text="Student Marks Grade App"
-        android:textSize="20sp"
-        android:textStyle="bold"
+        android:text="PIZZA APP"
+        android:textColor="#F40A0A"
+        android:textSize="24sp"
+        android:textStyle="bold|italic"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <EditText
-        android:id="@+id/txtStudentNo"
-        android:layout_width="365dp"
-        android:layout_height="61dp"
-        android:layout_marginStart="18dp"
-        android:layout_marginTop="26dp"
-        android:ems="10"
-        android:hint="Student No."
-        android:inputType="text"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
-
-    <EditText
-        android:id="@+id/txtName"
-        android:layout_width="366dp"
-        android:layout_height="51dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="6dp"
-        android:ems="10"
-        android:hint="Name"
-        android:inputType="text"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtStudentNo" />
-
-    <EditText
-        android:id="@+id/txtAge"
-        android:layout_width="370dp"
-        android:layout_height="45dp"
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="21dp"
-        android:ems="10"
-        android:hint="Age"
-        android:inputType="text"
+        android:layout_marginTop="54dp"
+        android:text="Size (base price)"
+        android:textColor="#5066E7"
+        android:textSize="16sp"
+        android:textStyle="bold|italic"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtName" />
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <EditText
-        android:id="@+id/txtSubject"
-        android:layout_width="369dp"
-        android:layout_height="47dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="12dp"
-        android:ems="10"
-        android:hint="Subject"
-        android:inputType="text"
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="143dp"
+        android:layout_marginTop="54dp"
+        android:text="Base type (extra)"
+        android:textColor="#5066E7"
+        android:textSize="16sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintStart_toEndOf="@+id/textView2"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="116dp"
+        android:layout_marginTop="32dp"
+        android:text="Toppings (R7.25 each)"
+        android:textColor="#5066E7"
+        android:textSize="16sp"
+        android:textStyle="bold|italic"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtAge" />
+        app:layout_constraintTop_toBottomOf="@+id/rbLarge" />
 
-    <EditText
-        android:id="@+id/txtMark"
-        android:layout_width="369dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="16dp"
+    <CheckBox
+        android:id="@+id/cbPepperoni"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="33dp"
+        android:layout_marginTop="96dp"
+        android:text="Pepperoni"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rbLarge" />
+
+    <CheckBox
+        android:id="@+id/cbMushroom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="33dp"
+        android:layout_marginTop="40dp"
+        android:text="Mushroom"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cbPepperoni" />
+
+    <CheckBox
+        android:id="@+id/cbCheese"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="96dp"
+        android:layout_marginTop="41dp"
+        android:text="Cheese"
+        app:layout_constraintStart_toEndOf="@+id/cbPepperoni"
+        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+    <CheckBox
+        android:id="@+id/cbOlives"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="92dp"
+        android:layout_marginTop="40dp"
+        android:text="Olives"
+        app:layout_constraintStart_toEndOf="@+id/cbMushroom"
+        app:layout_constraintTop_toBottomOf="@+id/cbCheese" />
+
+    <RadioButton
+        android:id="@+id/rbSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="27dp"
+        android:text="Small - R55"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <RadioButton
+        android:id="@+id/rbMedium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="23dp"
+        android:text="Medium - R70.50"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rbSmall" />
+
+    <RadioButton
+        android:id="@+id/rbLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
         android:layout_marginTop="19dp"
-        android:ems="10"
-        android:hint="Mark obtained(0-100)"
-        android:inputType="text"
+        android:text="Large - R150.00"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtSubject" />
+        app:layout_constraintTop_toBottomOf="@+id/rbMedium" />
+
+    <RadioButton
+        android:id="@+id/rbThin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="143dp"
+        android:layout_marginTop="27dp"
+        android:text="Thin +R0.00"
+        app:layout_constraintStart_toEndOf="@+id/rbSmall"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+    <RadioButton
+        android:id="@+id/rbRegular"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="105dp"
+        android:layout_marginTop="26dp"
+        android:text="Regular +R3.00"
+        app:layout_constraintStart_toEndOf="@+id/rbMedium"
+        app:layout_constraintTop_toBottomOf="@+id/rbThin" />
+
+    <RadioButton
+        android:id="@+id/rbThick"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="114dp"
+        android:layout_marginTop="21dp"
+        android:text="Thick +R20.00"
+        app:layout_constraintStart_toEndOf="@+id/rbLarge"
+        app:layout_constraintTop_toBottomOf="@+id/rbRegular" />
 
     <Button
-        android:id="@+id/btnComputeGrade"
-        android:layout_width="368dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="12dp"
-        android:layout_marginTop="8dp"
-        android:text="Compute Grade"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtMark" />
+        android:id="@+id/btnPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Calculate Price"
+        tools:layout_editor_absoluteX="33dp"
+        tools:layout_editor_absoluteY="542dp" />
 
     <TextView
         android:id="@+id/txtResults"
-        android:layout_width="360dp"
-        android:layout_height="200dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="84dp"
-        android:background="#0C505050"
-        android:backgroundTint="#423737"
-        android:text="Results will appear here"
+        android:layout_width="292dp"
+        android:layout_height="111dp"
+        android:layout_marginStart="59dp"
+        android:layout_marginTop="12dp"
+        android:text="Results"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnComputeGrade" />
+        app:layout_constraintTop_toBottomOf="@+id/btnPrice" />
 
     <Button
         android:id="@+id/btnClear"
-        android:layout_width="370dp"
-        android:layout_height="47dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="20dp"
+        android:layout_width="130dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="65dp"
+        android:layout_marginTop="22dp"
         android:text="Clear"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnComputeGrade" />
+        app:layout_constraintStart_toEndOf="@+id/btnPrice"
+        app:layout_constraintTop_toBottomOf="@+id/cbOlives" />
 </androidx.constraintlayout.widget.ConstraintLayout>

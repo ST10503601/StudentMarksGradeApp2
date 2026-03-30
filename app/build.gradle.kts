@@ -3,13 +3,13 @@ plugins {
 }
 
 android {
-    namespace = "com.example.studentmarksgradeapp"
+    namespace = "com.example.pizzaapp"
     compileSdk {
         version = release(36)
     }
 
     defaultConfig {
-        applicationId = "com.example.studentmarksgradeapp"
+        applicationId = "com.example.pizzaapp"
         minSdk = 26
         targetSdk = 36
         versionCode = 1
